@@ -29,8 +29,16 @@
   :plugins [[lein-cljsbuild "1.0.2"]]
   :hooks [leiningen.cljsbuild]
   :cljsbuild {:builds
-              [{:source-paths ["src"]
+              [{:id "dev"
+                :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/main.js"
                            :output-dir "resources/public/js/out"
                            :source-map true
-                           :optimizations :none}}]})
+                           :optimizations :none}}
+               {:id "prod"
+                :source-paths ["src"]
+                :compiler {:output-to "resources/public/js/main.js"
+                           :optimizations :advanced
+                           :pretty-print false
+                           :preamble ["react/react.min.js"]
+                           :externs ["react/externs/react.js"]}}]})
