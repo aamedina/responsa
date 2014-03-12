@@ -1,6 +1,6 @@
 (defproject responsa "0.1.0-SNAPSHOT"
-  :license {:name "Eclipse Public License - v 1.0"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "GNU Public License v3.0"
+            :url "https://www.gnu.org/copyleft/gpl.html"}
   :repositories
   {"sonatype"
    "http://oss.sonatype.org/content/repositories/snapshots"
