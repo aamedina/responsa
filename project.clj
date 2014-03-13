@@ -26,17 +26,18 @@
                                   [enlive "1.1.4"]]
                    :plugins [[com.cemerick/austin "0.1.4"]]
                    :source-paths ["dev"]}}
+  :source-paths ["src/clj"]
   :plugins [[lein-cljsbuild "1.0.2"]]
   :hooks [leiningen.cljsbuild]
   :cljsbuild {:builds
               [{:id "dev"
-                :source-paths ["src"]
+                :source-paths ["cljs/src"]
                 :compiler {:output-to "resources/public/js/main.js"
                            :output-dir "resources/public/js/out"
                            :source-map true
                            :optimizations :none}}
                {:id "prod"
-                :source-paths ["src"]
+                :source-paths ["cljs/src"]
                 :compiler {:output-to "resources/public/js/main.js"
                            :optimizations :advanced
                            :pretty-print false
