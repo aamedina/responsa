@@ -31,13 +31,13 @@
   :hooks [leiningen.cljsbuild]
   :cljsbuild {:builds
               [{:id "dev"
-                :source-paths ["cljs/src"]
+                :source-paths ["src/cljs"]
                 :compiler {:output-to "resources/public/js/main.js"
                            :output-dir "resources/public/js/out"
                            :source-map true
                            :optimizations :none}}
                {:id "prod"
-                :source-paths ["cljs/src"]
+                :source-paths ["src/cljs"]
                 :compiler {:output-to "resources/public/js/main.js"
                            :optimizations :advanced
                            :pretty-print false
